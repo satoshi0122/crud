@@ -23,7 +23,7 @@
             <img src="{{  asset('img/kingashinnen.png')}}" class="kingashinnen-img">
         </div>
         <div class="text-box">
-            {{ $post->nationality }}
+            {!!nl2br(e($post->nationality))!!}
         </div>
         
     </div>

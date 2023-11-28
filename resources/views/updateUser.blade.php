@@ -28,10 +28,10 @@
                     <option value="Other">Other</option>
                 </select>
                 <label for="Nationality">メッセージ</label><br>
-                <input type="textarea" class="form-control" name="nationality" placeholder="Enter Your Nationality" value="{{$post->nationality}}"><br>
+                <textarea type="text" class="form-control" name="nationality" placeholder="" value="">{{$post->nationality}}</textarea><br>
                 <label for="DOB">誕生日</label><br>
                 <input type="date" class="form-control" name="DOB" value="{{$post->dateOfBirth}}">
-                <button type="submit" class="btn btn-primary mt-3">Update User Details</button>
+                <button type="submit" class="btn btn-primary mt-3">更新</button>
             </form>
         </div>
     </div>
