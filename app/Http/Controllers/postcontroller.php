@@ -12,20 +12,20 @@ class postcontroller extends Controller
             // Define validation rules
     $rules = [
         'username' => 'required|string|max:255',
-        'address' => 'required',
-        'gender' => 'required|string',
-        'nationality' => 'required',
-        'DOB' => 'required'
+        // 'address' => 'required',
+        // 'gender' => 'required|string',
+        'nationality' => 'required:max:60000',
+        // 'DOB' => 'required'
     ];
 
     $this->validate($request, $rules);
 
     userDetails::create([
         'username' => $request->input('username'),
-        'address' => $request->input('address'),
-        'gender' => $request->input('gender'),
+        // 'address' => $request->input('address'),
+        // 'gender' => $request->input('gender'),
         'nationality' => $request->input('nationality'),
-        'dateOfBirth' => $request->input('DOB')
+        // 'dateOfBirth' => $request->input('DOB')
     ]);
 
     return redirect(route('home'));

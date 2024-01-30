@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('user_details', function (Blueprint $table) {
             $table->id();
             $table->string('username');
-            $table->string('address');
-            $table->string('gender');
-            $table->string('nationality');
-            $table->string('dateOfBirth');
+            // $table->string('address');
+            // $table->string('gender');
+            $table->string('nationality', '16000');
+            // $table->string('dateOfBirth');
             $table->timestamps();
         });
     }

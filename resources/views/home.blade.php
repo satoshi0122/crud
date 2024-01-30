@@ -10,13 +10,13 @@
                     <th scope="col">
                         <a href="{{route('addNewUser')}}" class="btn btn-success">新規追加</a>
                     </th>
-                    <th scope="col">名前</th>
-                    <th scope="col">住所</th>
-                    <th scope="col">性別</th>
-                    <th scope="col">メッセージ</th>   
+                    <th scope="col">タイトル</th>
+                    {{-- <th scope="col">住所</th> --}}
+                    {{-- <th scope="col">性別</th> --}}
+                    <th scope="col">内容</th>   
                     {{-- ↑元々国籍入力藍 --}}
-                    <th scope="col">誕生日</th>
-                    <th scope="col">操作</th>
+                    {{-- <th scope="col">誕生日</th> --}}
+                    {{-- <th scope="col">操作</th> --}}
                   </tr>
                 </thead>
                 <tbody>
@@ -24,10 +24,10 @@
                     <tr>
                         <th scope="row">{{$post->id}}　　　　　　</th>
                         <td>{{$post->username}}</td>
-                        <td>{{$post->address}}</td>
-                        <td>{{$post->gender}}</td>
+                        {{-- <td>{{$post->address}}</td> --}}
+                        {{-- <td>{{$post->gender}}</td> --}}
                         <td>{{$post->nationality}}</td>
-                        <td>{{$post->dateOfBirth}}</td>
+                        {{-- <td>{{$post->dateOfBirth}}</td> --}}
                         <td>
                             <a href="{{route('updateUser',$post->id)}}" class="btn btn-dark btn-sm m-2" style="width: 100%;">更新</a><br>
                             <a href="{{route('deleteUser',$post->id)}}" class="btn btn-danger btn-sm m-2" style="width: 100%;">削除</a>

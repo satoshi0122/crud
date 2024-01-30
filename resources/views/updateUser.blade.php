@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container">
+{{-- <div class="container">
     <div class="row">
         <div class="col-12">
             <form action="{{route('update',$post->id)}}" method="POST">
@@ -32,6 +32,30 @@
                 <label for="DOB">誕生日</label><br>
                 <input type="date" class="form-control" name="DOB" value="{{$post->dateOfBirth}}">
                 <button type="submit" class="btn btn-primary mt-3">更新</button>
+            </form>
+        </div>
+    </div>
+</div> --}}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form action="{{route('update' ,$post->id)}}" method="POST">
+                @csrf
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                        </ul>
+                    </div>
+                @endif
+                <label for="Username">題名</label><br>
+                <input type="text" class="form-control" name="username" placeholder="" value="{{$post->username}}"><br>
+                <label for="Nationality">memo</label><br>
+                <textarea type="text" class="form-control" name="nationality" placeholder="memo" style="height:600px">{{$post->nationality}}</textarea><br>
+                <button type="submit" class="btn btn-primary mt-3" >更新<button>
+                    {{-- <a href="{{route('deleteUser',$post->id)}}" class="btn btn-danger btn-sm m-2" style="width: 100%;">削除</a> --}}
             </form>
         </div>
     </div>
