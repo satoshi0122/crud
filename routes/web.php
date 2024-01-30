@@ -34,6 +34,3 @@ route::get('/updateUser/{id}',[HomeController::class,'updateUser'])->name('updat
 route::post('/update/{id}',[postcontroller::class,'update'])->name('update');
 
 route::get('/delete/{id}',[postcontroller::class,'deleteUser'])->name('deleteUser');
-
-//年賀状部分
-route::get('/card/{id}',[postcontroller::class,'newYearCard'])->name('newYearCard');

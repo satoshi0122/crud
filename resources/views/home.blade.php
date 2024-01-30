@@ -30,7 +30,6 @@
                         <td>{{$post->dateOfBirth}}</td>
                         <td>
                             <a href="{{route('updateUser',$post->id)}}" class="btn btn-dark btn-sm m-2" style="width: 100%;">更新</a><br>
-                            <a href="{{route('newYearCard',$post->id)}}" class="btn btn-dark btn-sm m-2" style="width: 100%;">年賀状ページ</a><br>
                             <a href="{{route('deleteUser',$post->id)}}" class="btn btn-danger btn-sm m-2" style="width: 100%;">削除</a>
                         </td>
                     </tr>
