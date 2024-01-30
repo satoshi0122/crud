@@ -20,6 +20,7 @@
             </div>
         </div>
         <div class="box-3">
+            {{-- 謹賀新年 --}}
             <img src="{{  asset('img/kingashinnen.png')}}" class="kingashinnen-img">
         </div>
         <div class="text-box">
@@ -30,7 +31,7 @@
 </div>
 
 <style>
-    /* 時間がなくて...ごり押しです...... */
+    /* 時間があれば......... */
 
     html {
     height: 100%;
@@ -49,7 +50,7 @@
         max-width: 800px;
         margin: 0 auto;
         background-color:rgb(255, 218, 96);
-        
+        height: 100vh;
     }
     .box-2{
         display: flex;
@@ -66,7 +67,6 @@
     }
     .box-3{
         width: 100%;
-        height: 10%;
         background-color:rgb(255, 153, 0);
     }
     .year-img{
@@ -85,7 +85,8 @@
         margin: 70% 15% 0 15%;
     }
     .kingashinnen-img{
-        width: 40%;
+        /* width: 40%; */
+        width:40%;
         margin: 0 30%;
     }
     .text-box{
